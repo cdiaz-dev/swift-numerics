@@ -56,12 +56,12 @@ let package = Package(
       name: "RealModule",
       dependencies: ["_NumericsShims"],
       exclude: excludedFilenames,
+      swiftSettings: [
+          .define("BUILD_LIBRARY_FOR_DISTRIBUTION")
+      ],
       linkerSettings: [
         .linkedLibrary("m", .when(platforms: [.linux, .android]))
       ],
-      swiftSettings: [
-          .define("BUILD_LIBRARY_FOR_DISTRIBUTION")
-      ]
     ),
     
     // MARK: - Implementation details
