@@ -61,7 +61,7 @@ let package = Package(
       ],
       linkerSettings: [
         .linkedLibrary("m", .when(platforms: [.linux, .android]))
-      ],
+      ]
     ),
     
     // MARK: - Implementation details
